@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    margin-left: 10px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+#menu-icon {
+    cursor: pointer;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+}
+
+nav ul li {
+    padding: 1em;
+    text-align: center;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul.show {
+    display: flex;
+}
+
+#tasks-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.task-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.task-card.completed {
+    background-color: #555; 
+    color: white;
+}
+
+.task-card.expanded {
+    max-height: 500px;
+}
+
+.task-detail {
+    display: none;
+}
+
+.task-card.expanded .task-detail {
+    display: block;
+}
+
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 1em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.task-form label {
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select {
+    width: 100%;
+    padding: 0.5em;
+    margin-bottom: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.submit-button {
+    padding: 0.75em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #555;
+}
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
+}
+
+
+.play-button {
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.subtitulo {
+    font-size: 1.5em;
+    margin: 10px;
+}

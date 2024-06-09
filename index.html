@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <nav>
+            <i id="menu-icon" class='bx bx-menu'></i>
+            <h1>Administrador de Tareas</h1>
+            <ul id="menu" class="hidden">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="create-task.html">Crear Tarea</a></li>
+                <li><a href="edit-task.html">Editar Tarea</a></li>
+                <li><a href="settings.html">Ajustes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="tasks-container">
+            <!-- Cards -->
+        </section>
+    </main>
+    <script src="index.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuIcon = document.getElementById('menu-icon');
+            const menu = document.getElementById('menu');
+
+            menuIcon.addEventListener('click', () => {
+                menu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
