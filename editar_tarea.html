@@ -12,21 +12,23 @@
         <nav>
             <i id="menu-icon" class='bx bx-menu'></i>
             <h1>Administrador de Tareas</h1>
+            <img src="/IMG/todo.png" alt="Todo Icon" class="todo-icon">
             <ul id="menu" class="hidden">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="create-task.html">Crear Tarea</a></li>
-                <li><a href="edit-task.html">Editar Tarea</a></li>
-                <li><a href="settings.html">Ajustes</a></li>
+                <li><a href="crear_tarea.html">Crear Tarea</a></li>
+                <li><a href="editar_tarea.html">Editar Tarea</a></li>
+                <li><a href="ajustes.html">Ajustes</a></li>
             </ul>
         </nav>
     </header>
+    
     <main>
         <h1 class="subtitulo">Editar Tarea</h1>
         <div id="tasks-container">
             <!-- cards -->
         </div>
     </main>
-    <script src="edit-task.js"></script>
+    <script src="editar_tarea.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuIcon = document.getElementById('menu-icon');

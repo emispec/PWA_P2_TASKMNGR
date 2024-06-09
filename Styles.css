@@ -64,6 +64,20 @@ nav ul.show {
     padding: 1em;
 }
 
+header h1 {
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.todo-icon {
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+}
+
+
 .task-card {
     display: flex;
     justify-content: space-between;
@@ -75,10 +89,17 @@ nav ul.show {
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 .task-card.completed {
-    background-color: #555; 
+    background-color: #52a210; 
     color: white;
 }
 
@@ -88,10 +109,20 @@ nav ul.show {
 
 .task-detail {
     display: none;
+    font-size: 0.9em;
+    margin-top: 0.5em;
 }
 
 .task-card.expanded .task-detail {
     display: block;
+}
+
+.task-meta {
+    font-size: 0.8em;;
+}
+
+.task-meta p {
+    margin: 0.2em 0;
 }
 
 
@@ -131,10 +162,16 @@ nav ul.show {
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .submit-button:hover {
     background-color: #555;
+}
+
+.submit-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
 }
 
 .hidden {
@@ -153,7 +190,18 @@ nav ul.show {
     cursor: pointer;
 }
 
+
 .subtitulo {
     font-size: 1.5em;
     margin: 10px;
+    text-align: center;
 }
+
+.slider-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+

@@ -20,15 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="task-card ${task.Estado === 'Terminada' ? 'completed' : ''}" data-id="${task.id}">
                     <div>
                         <h3 class="task-title">${task.Descripcion}</h3>
-                        <p>Creación: ${new Date(task.FechaCreacion).toLocaleString()}</p>
-                        ${task.Estado === 'Terminada' ? `<p>Terminación: ${new Date(task.FechaConclusion).toLocaleString()}</p>` : ''}
+                        <div class="task-meta">
+                            <p>Creación: ${new Date(task.FechaCreacion).toLocaleString()}</p>
+                            ${task.Estado === 'Terminada' ? `<p>Terminación: ${new Date(task.FechaConclusion).toLocaleString()}</p>` : ''}
+                        </div>
                         <div class="task-detail">${task.Detalle}</div>
                     </div>
-                    <img src="${task.Estado === 'Terminada' ? 'IMG/check.png' : 'IMG/play.png'}" class="play-button" data-id="${task.id}" alt="Play">
+                    <img src="${task.Estado === 'Terminada' ? 'IMG/check.png' : 'IMG/play.png'}" class="play-button ${task.Estado === 'Terminada' ? 'completed' : ''}" data-id="${task.id}" alt="Play">
                 </div>
             `).join('');
         attachEventListeners();
     }
+    
 
     function attachEventListeners() {
         document.querySelectorAll('.task-card').forEach(card => {

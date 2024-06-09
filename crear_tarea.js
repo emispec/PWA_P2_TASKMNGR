@@ -1,11 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('create-task-form');
+    const submitButton = form.querySelector('.submit-button');
+    const inputs = form.querySelectorAll('input, textarea, select');
+
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            const allFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+            submitButton.disabled = !allFilled;
+        });
+    });
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const title = document.getElementById('task-title').value;
         const detail = document.getElementById('task-detail').value;
         const status = document.getElementById('task-status').value;
+        
+        if (!title || !detail || !status) {
+            alert('Todos los campos son requeridos.');
+            return;
+        }
+        
         const task = {
             Descripcion: title,
             Detalle: detail,
@@ -31,3 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
         .catch(error => console.error('Error:', error));
     }
 });
+
+
+

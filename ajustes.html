@@ -12,28 +12,35 @@
         <nav>
             <i id="menu-icon" class='bx bx-menu'></i>
             <h1>Administrador de Tareas</h1>
+            <img src="/IMG/todo.png" alt="Todo Icon" class="todo-icon">
             <ul id="menu" class="hidden">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="create-task.html">Crear Tarea</a></li>
-                <li><a href="edit-task.html">Editar Tarea</a></li>
-                <li><a href="settings.html">Ajustes</a></li>
+                <li><a href="crear_tarea.html">Crear Tarea</a></li>
+                <li><a href="editar_tarea.html">Editar Tarea</a></li>
+                <li><a href="ajustes.html">Ajustes</a></li>
             </ul>
         </nav>
     </header>
+    
     <main>
         <h1 class="subtitulo">Ajustes</h1>
         <form id="settings-form" class="task-form">
             <label>Idioma: 
                 <select id="audio-language">
-                    <option value="en-US">English</option>
-                    <option value="es-ES">Spanish</option>
+                    <option value="en-US">Ingles</option>
+                    <option value="es-ES">Español</option>
                 </select>
             </label>
-            <label>Velocidad: <input type="range" id="audio-speed" min="-0.9" max="1.1" value="1" step="0.1"></label>
+            <label>Velocidad: <input type="range" id="audio-speed" min="-1" max="1" value="0" step="0.1"></label>
+            <div class="slider-labels">
+                <span>-1</span>
+                <span>0</span>
+                <span>1</span>
+            </div>
             <button type="submit" class="submit-button">Guardar Ajustes</button>
         </form>
     </main>
-    <script src="settings.js"></script>
+    <script src="ajustes.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const menuIcon = document.getElementById('menu-icon');
@@ -46,4 +53,5 @@
     </script>
 </body>
 </html>
+
 
